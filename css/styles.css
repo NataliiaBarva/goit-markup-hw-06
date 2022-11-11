@@ -913,11 +913,15 @@ span.logo-dark {
   left: 12px;
   transform: translateY(-50%);
 }
+
 .modal-form-input-wrapper {
   position: relative;
   display: block;
 }
-
+.modal-form-check-field {
+  position: relative;
+  display: flex;
+}
 .modal-form-submit {
   width: 200px;
   height: 50px;
@@ -939,11 +943,23 @@ span.logo-dark {
   
   border: 1px solid rgba(33, 33, 33, 0.2);
   padding: 10px 52px;
-  
 }
-.check-hidden {
 
+/*.modal-form-own-checkbox-icon {
+  display: none;
+  fill: var(--primary-dark-cl);
+  
+}*/
+.modal-form-check:checked + .modal-form-own-checkbox-icon {
+  background-color: var(--accent-txt-cl);
 }
+
+.modal-form-check:checked + .modal-form-own-checkbox-icon .modal-form-own-checkbox-icon {
+  display: block;
+  background: var(--primary-dark-cl);
+  border: 0.2px solid var(#FFFFFF);
+}
+
 
 /* 3 hw позиціонування */
 /*полосочка
