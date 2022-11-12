@@ -791,6 +791,23 @@ span.logo-dark {
   justify-content: center;
   column-gap: 10px;
 }
+/*----------Підписка в футері--------*/
+
+.subscription {
+  margin-left: 93px;
+}
+
+.footer-form-subscription {
+  display: flex;
+  gap: 12px;
+}
+.mail-subscription::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--main-font);
+  font-size: 16px;
+  padding-left: 16px;
+}
+
 .footer-subscription {
   font-weight: 700;
   font-size: 14px;
@@ -799,43 +816,47 @@ span.logo-dark {
   margin-bottom: 20px;
   left: 0;
   text-transform: uppercase;
-  gap: 12px;
+ 
 }
 .footer-form {
   display: block;
   gap: 12px;
   margin-left: auto;
 }
+
 .mail-subscription {
-  display: flex;
+ 
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: var(--secondary-dark-bg);
 }
+
 .btn-tlg {
-  display: inline-flex;
-  justify-content: center;
-  align-self: flex-end;
-  align-items: center;
+  display: block;
   border: none;
   min-width: 200px;
   height: 50px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88;
-  text-align: center;
   background-color: var(--accent-txt-cl);
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--primary-dark-cl);
   transition: fill, background-color var(--transition);
-  gap: 10px;
   cursor: pointer;
+  
 }
+
 .icon-tlg {
   position: absolute;
-  transform: translateY(50%);
+  fill: var(--primary-dark-cl);
+  margin-left: 10px;
+
 }
-.icon-send {
-  position: relative;
-}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -847,10 +868,10 @@ span.logo-dark {
 }
 
 /*відновити після заповнення форми*/
-/*.backdrop.is-hidden {
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-}*/
+}
 
 .modal {
   position: absolute;
@@ -933,16 +954,16 @@ span.logo-dark {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
-
 }
+
 .modal-form-field {
   position: relative;
-  
-  
 }
+
 .modal-form-bl {
 margin-bottom: 10px;
 }
+
 /*--Стилі для форм--*/
 .modal-form-title {
   font-family: var(--main-font);
@@ -953,6 +974,7 @@ margin-bottom: 10px;
   margin-bottom: 12px;
   color: var(--primary-light-cl);
 }
+
 .icon-form {
   position: absolute;
   left: 12px;
@@ -963,13 +985,14 @@ margin-bottom: 10px;
   position: relative;
   display: block;
 }
-
 .modal-form-check {
-  
+  position: absolute;
+  appearance: none;
 }
 .modal-form-check-field {
   position: relative;
   display: flex;
+  align-items: center;
   margin-bottom: 30px;
  }
 
@@ -1003,17 +1026,17 @@ margin-bottom: 10px;
   padding: 10px 52px;
 }
 .icon-form-check {
-  background: var(--primary-dark-cl);
-  
-  background: var(--primary-light-cl);
-  border: 0.2px solid var(--primary-dark-cl);
-  background-color: var(--accent-txt-cl);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  background: var(--accent-txt-cl);
   border-radius: 4px;
+  margin-right: 7px;
+  transition: background-color var(--accent-txt-cl);
 }
 .modal-form-own-checkbox-icon {
+  opacity: 0;
+  color: var(--main-font);
   
-  fill: var(--primary-dark-cl);
 }
 
 .modal-form-check:checked + .modal-form-own-checkbox-icon {
