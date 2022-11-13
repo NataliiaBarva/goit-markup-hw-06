@@ -626,6 +626,9 @@ img {
   transform: translateY(100%);
   transition: var(--transition);
 }
+.item-overlay {
+  text-decoration: none;
+}
 
 .item-overlay-img {
   position: relative;
@@ -870,15 +873,16 @@ span.logo-dark {
 }
 
 /*відновити після заповнення форми*/
-.backdrop.is-hidden {
+/*.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-}
+}*/
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
+  border-radius: 4px;
   transform: translate(-50%, -50%);
   transition: var(--transition);
   background-color: var(--primary-dark-cl);
@@ -913,7 +917,7 @@ span.logo-dark {
 .modal-form-desc {
   display: block;
   font-family: var(--main-font);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
   color: var(--secondary-light-cl);
@@ -957,7 +961,9 @@ span.logo-dark {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
 }
-
+.modal-close-btn:hover {
+  fill: var(--accent-txt-cl);
+}
 .modal-form-field {
   position: relative;
 }
@@ -987,10 +993,7 @@ margin-bottom: 10px;
   position: relative;
   display: block;
 }
-.modal-form-check {
-  position: absolute;
-  appearance: none;
-}
+
 .modal-form-check-field {
   position: relative;
   display: flex;
@@ -1029,26 +1032,30 @@ margin-bottom: 10px;
 }
 .icon-form-check {
   cursor: pointer;
-
-  background: var(--accent-txt-cl);
   border-radius: 4px;
   margin-right: 7px;
+  margin-left: 12px;
   transition: background-color var(--accent-txt-cl);
-}
-.modal-form-own-checkbox-icon {
-  opacity: 0;
-  color: var(--main-font);
   
 }
+.modal-form-own-checkbox-icon {
+  display: none;
+}
+.modal-form-check {
+  position: absolute;
+    
+}
+/*appearance: none; додати вверх щоб сховати станд галку*/
+
+
 
 .modal-form-check:checked + .modal-form-own-checkbox-icon {
-  background-color: var(--accent-txt-cl);
+  opacity: 0;
+  transition: var(--transition);
 }
 
-.modal-form-check:checked + .modal-form-checkbox .modal-form-own-checkbox-icon  {
-  display: block;
-  background: var(--primary-dark-cl);
-  border: 0.2px solid var(#FFFFFF);
+.modal-form-check:checked + .modal-form-checkbox .modal-form-own-uncheckbox-icon  {
+  opacity: 1;
 }
 
 
