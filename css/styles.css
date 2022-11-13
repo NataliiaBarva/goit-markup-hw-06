@@ -1047,11 +1047,8 @@ margin-bottom: 10px;
 }
 /*appearance: none; додати вверх щоб сховати станд галку*/
 
-
-
-.modal-form-check:checked + .modal-form-own-checkbox-icon {
-  opacity: 0;
-  transition: var(--transition);
+.modal-form-check:checked + .icon-form-check {
+  background-color: tomato;
 }
 
 .modal-form-check:checked + .modal-form-checkbox .modal-form-own-uncheckbox-icon  {
@@ -1073,3 +1070,10 @@ margin-bottom: 10px;
   .subtitle {
     display: flex;
     align-items: center;}
+        <input type="checkbox" name="polixy" id="policy" class="chec">
+        <span class="chec-svg">
+              <svg class="input-icon-one">
+                <use href="./symbol-defs.svg#icon-Vector">
+                </use>
+              </svg>
+            </span>
