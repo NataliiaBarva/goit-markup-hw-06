@@ -557,6 +557,7 @@ img {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 .portfolio-name {
@@ -569,7 +570,7 @@ img {
 }
 
 .portfolio-item {
-
+  
   width: 370px;
   background: var(--primary-dark-cl);
   border: 1px solid #eeeeee;
@@ -600,6 +601,7 @@ img {
 }
 
 .portfolio-name-tipe {
+
   padding: 20px 24px;
   border-right: 24px;
   border-bottom: 20px;
